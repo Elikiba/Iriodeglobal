@@ -33,7 +33,7 @@
 
     <main>
       <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">IROID Global and Logistics</h2>
+        <h2 id="about-heading">IROID Global And Logistics</h2>
         <p>
           We are a customer-first organization that specializes in the mass
           transportation of raw materials for manufacturing industries across
@@ -148,7 +148,6 @@
         </p>
       </section>
     </main>
-
     <footer>
       <section
         id="contact"
@@ -174,8 +173,17 @@
           </a>
         </div>
       </section>
+      <p>
+        &copy; <span id="currentYear"></span> IROID Global and Logistics
+        &trade;. All rights reserved.
+      </p>
     </footer>
-
+    <script>
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Insert the year into the span with ID "currentYear"
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
     <script
       src="https://kit.fontawesome.com/16e38f0664.js"
       crossorigin="anonymous"
