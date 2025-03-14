@@ -256,7 +256,7 @@ button:hover {
 /* Hide hamburger on large screens */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex; /* Show hamburger on small screens */
+        display: none; /* Show hamburger on small screens */
     }
 
     .nav-menu {
