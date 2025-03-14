@@ -15,18 +15,31 @@
   <body>
     <header>
       <nav aria-label="Main navigation">
-        <button class="hamburger" aria-label="Toggle menu">
+        <button
+          class="hamburger"
+          onclick="toggle-menu()"
+          aria-label="Toggle menu"
+        >
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
+          &#9776;
         </button>
 
-        <ul>
-          <li><a href="#home">Home</a></li>
+        <ul class="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#data">Data</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <button
+              class="close-menu"
+              onclick="toggleMenu()"
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -163,12 +176,12 @@
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
           <a
-            href="https://wa.me/+234706782643"
+            href="https://wa.me/+2347086137054"
             aria-label="Chat with us on WhatsApp"
           >
             <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
           </a>
-          <a href="tel:+2347067826432" aria-label="Call us">
+          <a href="tel:+2347086137054" aria-label="Call us">
             <i class="fa-solid fa-phone fa-xs" aria-hidden="true"></i>
           </a>
         </div>
@@ -178,6 +191,14 @@
         &trade;. All rights reserved.
       </p>
     </footer>
+    <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        const hamburger = document.querySelector(".hamburger");
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      }
+    </script>
     <script>
       // Get the current year
       const currentYear = new Date().getFullYear();
@@ -214,8 +235,8 @@
       window.onscroll = function () {
         const scrollBtn = document.getElementById("scrollToTopBtn");
         scrollBtn.style.display =
-          document.body.scrollTop > 30 ||
-          document.documentElement.scrollTop > 30
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
             ? "block"
             : "none";
       };
