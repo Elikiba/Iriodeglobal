@@ -266,7 +266,7 @@ button:hover {
         top: 60px; /* Adjust based on header height */
         left: 0;
         width: 100%;
-        background: var(--primary-color);
+        background: #FCF6F5;
         padding: 1rem;
         text-align: center;
     }
