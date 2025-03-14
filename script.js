@@ -1,40 +1,47 @@
-const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
 
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
+      // Get the current year
+      const currentYear = new Date().getFullYear();
+      // Insert the year into the span with ID "currentYear"
+      document.getElementById("currentYear").textContent = currentYear;
+    </script>
+    <script
+      src="https://kit.fontawesome.com/16e38f0664.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <script defer>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      document
+        .getElementById("customerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("successMessage").style.display = "block";
+          this.reset();
         });
 
-document.getElementById('jobForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent form from submitting the traditional way
-  
-    const jobDate = document.getElementById('jobDate').value;
-    const jobDescription = document.getElementById('jobDescription').value;
-    const jobStatus = document.getElementById('jobStatus').value;
-  
-    console.log('Job Date:', jobDate);
-    console.log('Job Description:', jobDescription);
-    console.log('Job Status:', jobStatus);
-  
-    alert('Job data submitted successfully!');
-  });
+      window.onscroll = function () {
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+        scrollBtn.style.display =
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+            ? "block"
+            : "none";
+      };
 
-
-  // Get the button
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-// Show the button when the user scrolls down 20px from the top
-window.onscroll = function () {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
-    } else {
-        scrollToTopBtn.style.display = "none";
-    }
-};
-
-// Scroll to the top of the document when the button is clicked
-scrollToTopBtn.addEventListener("click", function () {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
-});
+      document
+        .getElementById("scrollToTopBtn")
+        .addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
