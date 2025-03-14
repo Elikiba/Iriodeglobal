@@ -225,13 +225,12 @@ button:hover {
     }
 }
 
-
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
-    height: 24px;
+    height: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -256,22 +255,50 @@ button:hover {
 /* Hide hamburger on large screens */
 @media (max-width: 768px) {
     .hamburger {
-        display: none; /* Show hamburger on small screens */
+        display: flex; 
+        font-size: 20px;
+        color: var(--secondary-color);
+        background: none;
+        border: none;
+        cursor: pointer;
     }
 
     .nav-menu {
-        display: none; /* Hide menu by default on small screens */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on header height */
+        top: 50px;
         left: 0;
-        width: 100%;
-        background: #FCF6F5;
+        width: 200px;
+        background: var(--primary-color);
         padding: 1rem;
         text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .nav-menu.active {
-        display: flex; /* Show menu when active */
+        display: flex;
     }
+
+    .close-menu {
+        background: none;
+        border: none;
+        color: var(--accent-color);
+        font-size: 1.6rem;
+        cursor: pointer;
+        padding: 0.2rem;
+        margin-top: 0.2rem;
+      }
+      
+      .close-menu:hover {
+        color: var(--secondary-color);
+      }
 }
+
+@media (min-width: 769px) {
+    .close-menu {
+      display: none;
+    }
+  }
+
