@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>IROID Global And Logistics</title>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main navigation">
+        <button class="hamburger" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#data">Data</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">IROID Global and Logistics</h2>
+        <p>
+          We are a customer-first organization that specializes in the mass
+          transportation of raw materials for manufacturing industries across
+          Nigeria. We act as a liaison between suppliers of raw materials and
+          manufacturing companies.
+        </p>
+        <div class="image-container">
+          <figure>
+            <img
+              src="disposal-1846033_1920.jpg"
+              alt="Scrap metals on a dumpsite"
+              loading="lazy"
+            />
+            <figcaption>Scrap metals at dumpsite</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="gabriel-santos-GBVDilE8yvI-unsplash.jpg"
+              alt="A scania truck transporting raw materials"
+              loading="lazy"
+            />
+            <figcaption>Truck transporting scrap metal</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Our Services and Benefits</h2>
+        <ul>
+          <li>
+            Supply of high-quality (Special-special) raw materials to
+            manufacturing companies.
+          </li>
+          <li>Offering high, attractive rates to dealers of raw materials.</li>
+          <li>
+            Offering <strong>super-quick (12-hour) payment</strong> to
+            customers.
+          </li>
+          <li>
+            Arranging for transportation of materials from anywhere in the
+            country.
+          </li>
+        </ul>
+        <figure>
+          <img
+            src="valdhy-mbemba-IEuOVQely6o-unsplash.jpg"
+            alt="Trucks parked after offloading"
+            loading="lazy"
+          />
+          <figcaption>Trucks after off-loading</figcaption>
+        </figure>
+      </section>
+
+      <section id="data" aria-labelledby="data-heading">
+        <h2 id="data-heading">Customer Data</h2>
+        <p>
+          Are you a dealer looking for <strong>High Commission</strong> and
+          <strong>Quick Payments</strong>, or a company looking for high-quality
+          raw material? Kindly reach out to us and let's deal! Or leave us your
+          details, and we will reach out to you!
+        </p>
+        <form
+          id="customerForm"
+          action="mailto:phenomenalmarv@gmail.com"
+          method="post"
+        >
+          <fieldset>
+            <legend class="sr-only">Customer Information</legend>
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Chinedu Danladi"
+              aria-label="Enter your full name"
+            />
+
+            <label for="location">State:</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Enugu"
+              aria-label="Enter your state"
+            />
+
+            <label for="phone-number">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              required
+              placeholder="0708 876 0987"
+              aria-label="Enter your phone number"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="osechima@gmail.com"
+              aria-label="Enter your email address"
+            />
+
+            <button type="submit" id="submit">Submit</button>
+          </fieldset>
+        </form>
+        <p id="successMessage" style="display: none; color: green">
+          Thank you! We will reach out to you shortly.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <section
+        id="contact"
+        role="contentinfo"
+        aria-labelledby="contact-heading"
+      >
+        <h2 id="contact-heading">Contact Us</h2>
+        <div class="contact-icons">
+          <a
+            href="mailto:phenomenalmarv@gmail.com"
+            aria-label="Send us an email"
+          >
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://wa.me/+234706782643"
+            aria-label="Chat with us on WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </a>
+          <a href="tel:+2347067826432" aria-label="Call us">
+            <i class="fa-solid fa-phone fa-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/16e38f0664.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <script defer>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      });
+
+      document
+        .getElementById("customerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("successMessage").style.display = "block";
+          this.reset();
+        });
+
+      window.onscroll = function () {
+        const scrollBtn = document.getElementById("scrollToTopBtn");
+        scrollBtn.style.display =
+          document.body.scrollTop > 30 ||
+          document.documentElement.scrollTop > 30
+            ? "block"
+            : "none";
+      };
+
+      document
+        .getElementById("scrollToTopBtn")
+        .addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+  </body>
+</html>
