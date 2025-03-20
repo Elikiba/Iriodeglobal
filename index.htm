@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&display=swap"
       rel="stylesheet"
     />
-    <title>IROID Global And Logistics</title>
+    <title>IRIOD Global And Logistics</title>
   </head>
   <body>
     <header>
@@ -46,7 +46,7 @@
 
     <main>
       <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">IROID Global And Logistics</h2>
+        <h2 id="about-heading">IRIOD Global And Logistics</h2>
         <p>
           We are a customer-first organization that specializes in the mass
           transportation of raw materials for manufacturing industries across
@@ -111,7 +111,7 @@
         <form
           id="customerForm"
           action="mailto:phenomenalmarv@gmail.com"
-          method="post"
+          method="POST"
         >
           <fieldset>
             <legend class="sr-only">Customer Information</legend>
@@ -121,7 +121,7 @@
               id="name"
               name="name"
               required
-              placeholder="Chinedu Danladi"
+              placeholder="e.g. Chinedu Danladi"
               aria-label="Enter your full name"
             />
 
@@ -130,7 +130,7 @@
               type="text"
               id="location"
               name="location"
-              placeholder="Enugu"
+              placeholder="e.g. Enugu"
               aria-label="Enter your state"
             />
 
@@ -140,7 +140,7 @@
               id="phone-number"
               name="phone-number"
               required
-              placeholder="0708 876 0987"
+              placeholder="e.g. 0708 876 0987"
               aria-label="Enter your phone number"
             />
 
@@ -149,7 +149,7 @@
               type="email"
               id="email"
               name="email"
-              placeholder="osechima@gmail.com"
+              placeholder="e.g osechima@gmail.com"
               aria-label="Enter your email address"
             />
 
@@ -187,7 +187,7 @@
         </div>
       </section>
       <p>
-        &copy; <span id="currentYear"></span> IROID Global and Logistics
+        &copy; <span id="currentYear"></span> IRIOD Global and Logistics
         &trade;. All rights reserved.
       </p>
     </footer>
@@ -198,6 +198,22 @@
         navMenu.classList.toggle("active");
         hamburger.classList.toggle("active");
       }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (event) => {
+        const isClickInsideMenu = navMenu.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+
+        // If the click is outside the menu and not on the hamburger button, close the menu
+        if (
+          !isClickInsideMenu &&
+          !isClickOnHamburger &&
+          navMenu.classList.contains("active")
+        ) {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }
+      });
     </script>
     <script>
       // Get the current year
@@ -235,8 +251,8 @@
       window.onscroll = function () {
         const scrollBtn = document.getElementById("scrollToTopBtn");
         scrollBtn.style.display =
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
+          document.body.scrollTop > 400 ||
+          document.documentElement.scrollTop > 400
             ? "block"
             : "none";
       };
