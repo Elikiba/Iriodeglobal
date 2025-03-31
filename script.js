@@ -40,6 +40,14 @@
             : "none";
       };
 
+// Using FormSubmit.co
+<form action="https://formsubmit.co/ovenserisosa@gmail.com" method="POST">
+  <input type="hidden" name="_subject" value="New Contact!">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <button type="submit">Send</button>
+</form>
+
       document
         .getElementById("scrollToTopBtn")
         .addEventListener("click", () => {
