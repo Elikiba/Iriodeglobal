@@ -91,13 +91,45 @@ nav ul li a:hover {
     background-color: whitesmoke;
 }
 
-.image-container {
+ /* Add these new styles */
+ .truck-wrapper {
+    width: 100%;
+    overflow: hidden; /* Prevents any overflow */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .truck-container {
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  .truck-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block; /* Removes any inline spacing */
+  }
+  
+  /* Update existing image styles */
+  .image-container img {
+    min-width: auto;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+/* .image-container {
     display: flex;
     justify-content: center;
     gap: 1rem;
     flex-wrap: wrap;
     margin: 2rem 0;
-    
+    align-items: center;
 }
 
 img {
@@ -106,7 +138,7 @@ img {
     height: auto;
     border-radius: 5px;
     max-width: 100%;
-}
+} */
 
 h1 {
     margin-top: 0;
@@ -240,6 +272,10 @@ button:hover {
     background-color: var(--accent-color);
 }
 
+
+
+/* Animations */
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(50px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -269,6 +305,25 @@ button:hover {
     form fieldset {
         padding: 1rem;
     }
+
+    /* Responsive */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .truck-container {
+    padding: 0 1rem;
+  }
+  
+  .image-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .image-container img {
+    width: calc(100% - 2rem); /* Accounts for padding */
+    margin: 0 auto;
+  }
+}
 }
 
 .hamburger {
